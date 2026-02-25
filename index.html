@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Pulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <main class="app-shell">
+    <section class="weather-card" id="card">
+      <header class="card-head">
+        <p class="kicker">REAL TIME WEATHER</p>
+        <h1>Weather Pulse</h1>
+      </header>
+
+      <div class="search-row">
+        <input type="text" id="city-input" placeholder="Search city (e.g. Surat)" spellcheck="false" autocomplete="off">
+        <button id="search-btn" aria-label="Search weather">Check</button>
+      </div>
+
+      <p class="status" id="status-text">Type a city and press Enter.</p>
+
+      <section id="weather-info" class="weather-info hidden" aria-live="polite">
+        <div class="hero-row">
+          <div>
+            <p class="temp" id="temperature">--&deg;C</p>
+            <h2 id="city-name">City</h2>
+            <p class="meta" id="condition-text">Condition</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat">
+            <p>Humidity</p>
+            <h3 id="humidity">--%</h3>
+          </article>
+          <article class="stat">
+            <p>Wind</p>
+            <h3 id="wind-speed">-- km/h</h3>
+          </article>
+          <article class="stat">
+            <p>Feels Like</p>
+            <h3 id="feels-like">--&deg;C</h3>
+          </article>
+          <article class="stat">
+            <p>Rain Chance</p>
+            <h3 id="rain-chance">--%</h3>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
